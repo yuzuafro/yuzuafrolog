@@ -1,0 +1,14 @@
+baseURL = "https://yuzuafro.github.io/yuzuafrolog/"
+languageCode = "ja-jp"
+title = "ゆずあふろのブログ"
+copyright = "&copy; yuzuafro"
+theme = "vienna"
+hasCJKLanguage = true
+paginate = 5
+
+[params]
+  twitter = "yuzu_afro"
+  github = "yuzuafro"
+  instagram = "yuzukonango"
+  disqus = "yuzuafro"
+  subtitle = "技術の話や趣味の話など"
