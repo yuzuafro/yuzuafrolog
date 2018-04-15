@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Myself on ゆずあふろのブログ</title>
+    <link>https://yuzuafro.github.io/yuzuafrolog/tags/myself/</link>
+    <description>Recent content in Myself on ゆずあふろのブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>&amp;copy; yuzuafro</copyright>
+    <lastBuildDate>Sun, 15 Apr 2018 02:04:32 +0900</lastBuildDate>
+    
+	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/tags/myself/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ブログ始めました</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/hello/</link>
+      <pubDate>Sun, 15 Apr 2018 02:04:32 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/hello/</guid>
+      <description>こんにちは、ゆずあふろです。 技術的な話のアウトプットの場所として、また趣味の話をする場所として、ブログを始めることにしました。 まずは自己紹介</description>
+    </item>
+    
+  </channel>
+</rss>
