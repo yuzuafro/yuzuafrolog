@@ -3,7 +3,6 @@ languageCode = "ja-jp"
 title = "ゆずあふろのブログ"
 copyright = "&copy; yuzuafro"
 theme = "vienna"
-hasCJKLanguage = true
 paginate = 5
 
 [params]
