@@ -32,7 +32,6 @@ https://raspberry-pi-moku.connpass.com/
 
 どうぞよろしくお願いします。
 
----
+{{< tweet 979134471181164544 >}}
 
 {{< instagram BhSpzWJjd9K >}}
-
