@@ -30,7 +30,11 @@ tags:
 
 https://raspberry-pi-moku.connpass.com/
 
+{{< blogcard url="https://raspberry-pi-moku.connpass.com" >}}
+
 どうぞよろしくお願いします。
+
+---
 
 {{< tweet 979134471181164544 >}}
 
