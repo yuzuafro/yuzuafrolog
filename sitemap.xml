@@ -3,12 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/posts/20180419_ham/</loc>
+    <lastmod>2018-04-19T23:40:23+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/posts/hello/</loc>
     <lastmod>2018-04-15T02:04:32+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/tags/ham/</loc>
+    <lastmod>2018-04-19T23:40:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/categories/meetup/</loc>
+    <lastmod>2018-04-19T23:40:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -26,19 +43,19 @@
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/posts/</loc>
-    <lastmod>2018-04-15T02:04:32+09:00</lastmod>
+    <lastmod>2018-04-19T23:40:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/tags/</loc>
-    <lastmod>2018-04-15T02:04:32+09:00</lastmod>
+    <lastmod>2018-04-19T23:40:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/</loc>
-    <lastmod>2018-04-15T02:04:32+09:00</lastmod>
+    <lastmod>2018-04-19T23:40:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   

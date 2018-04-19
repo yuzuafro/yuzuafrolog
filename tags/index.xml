@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&amp;copy; yuzuafro</copyright>
-    <lastBuildDate>Sun, 15 Apr 2018 02:04:32 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 23:40:23 +0900</lastBuildDate>
     
 	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ham</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/tags/ham/</link>
+      <pubDate>Thu, 19 Apr 2018 23:40:23 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/tags/ham/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Myself</title>
