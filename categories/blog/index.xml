@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on ゆずあふろのブログ</title>
+    <link>https://yuzuafro.github.io/yuzuafrolog/categories/blog/</link>
+    <description>Recent content in Blog on ゆずあふろのブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>&amp;copy; yuzuafro</copyright>
+    <lastBuildDate>Sun, 29 Apr 2018 21:36:33 +0900</lastBuildDate>
+    
+	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugoでブログを作る 1</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/</link>
+      <pubDate>Sun, 29 Apr 2018 21:36:33 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/</guid>
+      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
+今日はHugoでブログを作る方法について書いてみます。&lt;/p&gt;
+
+&lt;p&gt;この記事ではHugoをインストールして、ローカルホストで確認するところまでを試してみます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

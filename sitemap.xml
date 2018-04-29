@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/</loc>
+    <lastmod>2018-04-29T21:36:33+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/posts/20180422_raspimoku/</loc>
     <lastmod>2018-04-22T23:32:05+09:00</lastmod>
   </url>
@@ -18,13 +23,26 @@
   </url>
   
   <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/categories/blog/</loc>
+    <lastmod>2018-04-29T21:36:33+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/categories/</loc>
+    <lastmod>2018-04-29T21:36:33+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/tags/ham/</loc>
     <lastmod>2018-04-19T23:40:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/tags/hugo/</loc>
+    <lastmod>2018-04-29T21:36:33+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -48,7 +66,7 @@
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/posts/</loc>
-    <lastmod>2018-04-22T23:32:05+09:00</lastmod>
+    <lastmod>2018-04-29T21:36:33+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -66,7 +84,7 @@
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/</loc>
-    <lastmod>2018-04-22T23:32:05+09:00</lastmod>
+    <lastmod>2018-04-29T21:36:33+09:00</lastmod>
     <priority>0</priority>
   </url>
   

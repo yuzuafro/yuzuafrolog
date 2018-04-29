@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Hugoでブログを作る 1 &middot;  ゆずあふろのブログ" />
+  
+  <meta property="og:site_name" content="ゆずあふろのブログ" />
+  <meta property="og:url" content="https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2018-04-29T21:36:33&#43;09:00" />
+  
+  <meta property="og:article:tag" content="hugo" />
+  
+  
+
+  <title>
+     Hugoでブログを作る 1 &middot;  ゆずあふろのブログ
+  </title>
+
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/main.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="https://yuzuafro.github.io/yuzuafrolog/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://yuzuafro.github.io/yuzuafrolog/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    <header class="global-header"  style="background-image:url(https://yuzuafro.github.io/yuzuafrolog/images/top.jpg)">
+    <section class="header-text">
+      <h1><a href="https://yuzuafro.github.io/yuzuafrolog/">ゆずあふろのブログ</a></h1>
+      
+      <div class="tag-line">
+        技術の話や趣味の話など
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+      
+      <a href="https://yuzuafro.github.io/yuzuafrolog/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">Hugoでブログを作る 1</h1>
+    <div class="post-meta clearfix">
+    
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2018-04-29T21:36:33&#43;09:00">
+          Apr 29, 2018
+        </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-category small"><a href="https://yuzuafro.github.io/yuzuafrolog//categories/blog">blog</a></span>
+        
+      </div>
+      </br>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/hugo">hugo</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    <p>こんにちは、ゆずあふろです。<br />
+今日はHugoでブログを作る方法について書いてみます。</p>
+
+<p>この記事ではHugoをインストールして、ローカルホストで確認するところまでを試してみます。</p>
+
+<p></br></p>
+
+<p></p>
+
+<h3 id="hugoとは">Hugoとは</h3>
+
+<hr />
+
+<p>Hugoは静的サイトジェネレーターです。<br />
+HugoとGithub Pagesを使うと無料でブログサイトを公開することができます。<br />
+コンテンツ(ブログの記事)はMarkdown形式で書くことができます。</p>
+
+<p>このブログはHugo + Github Pagesを使って作成されています。</p>
+
+<p>公式サイトは↓↓↓こちらになります。<br />
+<a href="https://gohugo.io/">https://gohugo.io/</a></p>
+
+<p>公開されているテーマを使用して、簡単にサイト作成をすることができます。<br />
+オリジナルのテーマを公開することもできるようです。<br />
+<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+
+<p></br></p>
+
+<h3 id="hugoの使い方">Hugoの使い方</h3>
+
+<hr />
+
+<h4 id="インストール">インストール</h4>
+
+<hr />
+
+<p><a href="https://gohugo.io/getting-started/quick-start/">Quick Startページ</a> の手順通りに進めて行きます。</p>
+
+<pre><code class="language-bash">$ brew install hugo
+</code></pre>
+
+<p>インストールが始まります。</p>
+
+<pre><code class="language-bash">$ hugo version
+Hugo Static Site Generator v0.38 darwin/amd64 BuildDate: 
+</code></pre>
+
+<p>v0.38がインストールされているようです。</p>
+
+<p></br></p>
+
+<h4 id="サイト作成">サイト作成</h4>
+
+<hr />
+
+<p>hugo new siteコマンドを実行してサイトのひな形を作成します。<br />
+blog の部分は任意の名前でよいです。</p>
+
+<pre><code class="language-bash">$ hugo new site blog
+</code></pre>
+
+<p>以下のような構成のフォルダ(blog)が作成されます。</p>
+
+<pre><code class="language-bash">$ cd blog
+$ tree
+.
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre>
+
+<p>Quick Start の手順では、次にテーマを選択して、git submodule add しています。<br />
+私は、vienna を使うことにしました。</p>
+
+<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a><br />
+<a href="https://themes.gohugo.io/vienna/">https://themes.gohugo.io/vienna/</a></p>
+
+<pre><code class="language-bash">$ git init
+$ git submodule add https://themes.gohugo.io/vienna themes/vienna
+</code></pre>
+
+<p>config.toml に設定を追加していきます。<br />
+以下はこのブログの例です。</p>
+
+<pre><code>baseURL = &quot;&quot;
+languageCode = &quot;ja-jp&quot;
+title = &quot;ゆずあふろのブログ&quot; 
+copyright = &quot;&amp;copy; yuzuafro&quot;
+theme = &quot;vienna&quot;
+paginate = 5 
+
+[params]
+  twitter = &quot;yuzu_afro&quot;
+  github = &quot;yuzuafro&quot;
+  instagram = &quot;yuzukonango&quot;
+  disqus = &quot;yuzuafro&quot;
+  subtitle = &quot;技術の話や趣味の話など&quot; 
+</code></pre>
+
+<p>ここまできたら、hugo serverコマンドで、ローカルホストでサイト構成を確認してみます。</p>
+
+<pre><code class="language-bash">$ hugo server -D -t vienna
+...(省略)...
+Web Server is available at //localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre>
+
+<p>-D は Draft(下書き)も表示する、-t はテーマを指定しています。<br />
+config.toml で指定しているので、なくても大丈夫です。</p>
+
+<p>ブラウザで、<a href="http://localhost:1313">http://localhost:1313</a> にアクセスしてみると、作成中のサイトを確認することができます。</p>
+
+<p>こんな感じです。</p>
+
+<p><img src="./site_image_001.png"></p>
+
+<p>続いてhugo newコマンドで、ブログ記事を作成します。</p>
+
+<pre><code class="language-bash">$ mkdir posts/my-first-post/
+$ hugo new posts/my-first-post/index.md
+</code></pre>
+
+<p>Quick Startでは posts の下に my-first-post.md を作成しているけれど、posts以下にさらに記事ごとのフォルダを作って、index.md を作成する方がおすすめです。</p>
+
+<p>なぜなら、画像ファイルなどを参照する際に、相対パスが使えるのでこちらの方が都合がよいからです。<br />
+(今までは staticフォルダ以下に置いていたようですが、localhostでの確認時とGithub Pagesのホスティング時にファイルパスが上手く合わせられなくてツラかったので)</p>
+
+<p>この機能はHugo v0.32以降で使用できるようです。<br />
+<a href="https://gohugo.io/content-management/organization/">https://gohugo.io/content-management/organization/</a></p>
+
+<p>hugo serverコマンドを引き続き実行していれば、変更が保存されるたびに <a href="http://localhost:1313">http://localhost:1313</a> ページが更新されます。</p>
+
+<p></br></p>
+
+<h3 id="コンテンツ-ブログ記事-の編集">コンテンツ(ブログ記事)の編集</h3>
+
+<hr />
+
+<p>ブログ記事のMarkdownファイルを編集していきます。
+初期状態では以下のようになっています。</p>
+
+<pre><code>---
+title: &quot;my-first-post&quot;
+date: 2018-04-29T21:36:33+09:00
+draft: true
+---
+</code></pre>
+
+<p>これを編集します。<br />
+title には記事のタイトルが入ります。<br />
+draft は本番用の記事からは外しておきます。<br />
+タグやカテゴリも使用することができる(テーマによってはできる)ので、記述していきます。</p>
+
+<p>&rdquo;&mdash;&rdquo; の下から実際の記事を書きます。</p>
+
+<pre><code>---
+title: &quot;初めてのブログです&quot;
+date: 2018-04-29T21:36:33+09:00
+categories:
+- &quot;blog&quot;
+tags:
+- &quot;sample&quot;
+---
+
+これは初めてのブログです。  
+よろしくお願いします。
+
+## ブログを始めた経緯
+---
+...
+</code></pre>
+
+<p></br></p>
+
+<h3 id="各フォルダ-ファイルの役割">各フォルダ・ファイルの役割</h3>
+
+<hr />
+
+<p>各フォルダ・ファイルの役割は以下のようになっています。<br />
+関係ありませんが、この表を作ってみて、viennaテーマは表組みのCSSが全然整っていなくて、私は今がっかりしているところです。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">フォルダ名</th>
+<th align="left">役割</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">archetypes</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">config.toml</td>
+<td align="left">サイト全体の設定ファイル</td>
+</tr>
+
+<tr>
+<td align="left">content</td>
+<td align="left">コンテンツ(ブログ記事)のファイルを置くフォルダ</td>
+</tr>
+
+<tr>
+<td align="left">data</td>
+<td align="left">??</td>
+</tr>
+
+<tr>
+<td align="left">layouts</td>
+<td align="left">カスタマイズしたhtmlファイルを置く(ショートコードなど)</td>
+</tr>
+
+<tr>
+<td align="left">static</td>
+<td align="left">カスタマイズしたcssファイルやfaviconなどを置く</td>
+</tr>
+
+<tr>
+<td align="left">themes</td>
+<td align="left">テーマファイル用のフォルダ、基本的にはいじらなくてよいはず</td>
+</tr>
+
+<tr>
+<td align="left">public</td>
+<td align="left">ホスティングサーバーに置くべきファイル群、hugoコマンドを実行すると作成される</td>
+</tr>
+</tbody>
+</table>
+
+<p></br></p>
+  </section>
+  <footer>
+    
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'yuzuafro';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="https://yuzuafro.github.io/yuzuafrolog/posts/20180422_raspimoku/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; yuzuafro
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <script src="https://yuzuafro.github.io/yuzuafrolog/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+</body>
+</html>
+

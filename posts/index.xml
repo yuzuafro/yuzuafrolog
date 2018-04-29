@@ -7,10 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&amp;copy; yuzuafro</copyright>
-    <lastBuildDate>Sun, 22 Apr 2018 23:32:05 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 29 Apr 2018 21:36:33 +0900</lastBuildDate>
     
 	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoでブログを作る 1</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/</link>
+      <pubDate>Sun, 29 Apr 2018 21:36:33 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/</guid>
+      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
+今日はHugoでブログを作る方法について書いてみます。&lt;/p&gt;
+
+&lt;p&gt;この記事ではHugoをインストールして、ローカルホストで確認するところまでを試してみます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>第6回 Raspberry Pi もくもく会 開催レポート</title>
