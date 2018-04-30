@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&amp;copy; yuzuafro</copyright>
-    <lastBuildDate>Sun, 29 Apr 2018 21:36:33 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 09:05:51 +0900</lastBuildDate>
     
 	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoでブログを作る2</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo2/</link>
+      <pubDate>Mon, 30 Apr 2018 09:05:51 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo2/</guid>
+      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
+&lt;a href=&#34;../20180429_hugo1/&#34;&gt;前回&lt;/a&gt; の記事では、ローカルホストでブログサイトをプレビュー表示するところまでできました。&lt;br /&gt;
+今回の記事では、GitHub Pagesにアップロードして、インターネット上から確認するところまでを試してみます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugoでブログを作る 1</title>

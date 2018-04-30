@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Hugoでブログを作る2 &middot;  ゆずあふろのブログ" />
+  
+  <meta property="og:site_name" content="ゆずあふろのブログ" />
+  <meta property="og:url" content="https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo2/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2018-04-30T09:05:51&#43;09:00" />
+  
+  <meta property="og:article:tag" content="hugo" />
+  
+  <meta property="og:article:tag" content="GitHub Pages" />
+  
+  
+
+  <title>
+     Hugoでブログを作る2 &middot;  ゆずあふろのブログ
+  </title>
+
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/main.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="https://yuzuafro.github.io/yuzuafrolog/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://yuzuafro.github.io/yuzuafrolog/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    <header class="global-header"  style="background-image:url(https://yuzuafro.github.io/yuzuafrolog/images/top.jpg)">
+    <section class="header-text">
+      <h1><a href="https://yuzuafro.github.io/yuzuafrolog/">ゆずあふろのブログ</a></h1>
+      
+      <div class="tag-line">
+        技術の話や趣味の話など
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+      
+      <a href="https://yuzuafro.github.io/yuzuafrolog/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">Hugoでブログを作る2</h1>
+    <div class="post-meta clearfix">
+    
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2018-04-30T09:05:51&#43;09:00">
+          Apr 30, 2018
+        </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-category small"><a href="https://yuzuafro.github.io/yuzuafrolog//categories/blog">blog</a></span>
+        
+      </div>
+      </br>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/hugo">hugo</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/github-pages">GitHub Pages</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    <p>こんにちは、ゆずあふろです。<br />
+<a href="../20180429_hugo1/">前回</a> の記事では、ローカルホストでブログサイトをプレビュー表示するところまでできました。<br />
+今回の記事では、GitHub Pagesにアップロードして、インターネット上から確認するところまでを試してみます。</p>
+
+<p></p>
+
+<p></br></p>
+
+<h3 id="この記事でやりたいこと">この記事でやりたいこと</h3>
+
+<hr />
+
+<p>GitHub Pagesでは、Webサイトを無料で公開することができます。<br />
+この記事では、Hugoで作成したブログサイトのファイル群を、GitHubにpushして、GitHub Pagesから閲覧できるようにします。</p>
+
+<p>GitHub Pagesのページ<br />
+<a href="https://pages.github.com/">https://pages.github.com/</a></p>
+
+<p>GitHub Pagesには &ldquo;User or organization site&rdquo; と &ldquo;Projet site&rdquo; の2種類があります。<br />
+&ldquo;User or organization site&rdquo; にサイト構築をする方が簡単なのですが、1ユーザに1レポジトリになってしまうので、今回は複数個のブログを作成できる
+ように &ldquo;Project site&rdquo; の方に作成していきます。</p>
+
+<p>ちなみに無料で使えると言っても、以下の制限があるようです。</p>
+
+<ul>
+<li>ソースレポジトリは推奨1GBまで</li>
+<li>公開されているサイトは1GBまで</li>
+<li>1ヶ月あたり100GBの帯域幅制限</li>
+<li>1時間あたり10ビルドまで</li>
+</ul>
+
+<p><a href="https://help.github.com/articles/what-is-github-pages/">https://help.github.com/articles/what-is-github-pages/</a></p>
+
+<p>また、GitHub Pagesの設定で、どのブランチをGitHub Pagesとして使用するかを選択することができます。<br />
+今回は、gh-pagesブランチをGitHub Pagesとして使用し、masterブランチにはサイト作成時のソースコードを登録して、1つのレポジトリでコンテンツとソースコードの両方を管理できるように作成していきます。</p>
+
+<p></br></p>
+
+<h3 id="最終的に作成したいフォルダ構成">最終的に作成したいフォルダ構成</h3>
+
+<hr />
+
+<p>途中、いくつかエラーが発生したのを力技で解決してメモが残っていないので、最終的に作成したいフォルダ・ファイル構成を先に載せておきます。</p>
+
+<p>重要なのは、blogフォルダ以下に publicフォルダに実際のサイト構成(HTMLなどのコンテンツ) があり、publicフォルダをgh-pagesブランチにpushすること、またそれ以外のファイルをmasterブランチにpushすることです。</p>
+
+<pre><code>$ pwd
+/Users/(user name)/(blog path)/blog
+$ tree
+.
+├── README.md
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+│   └── posts
+│       └── my-first-post
+│           └── index.md
+├── data
+├── deploy.sh
+├── layouts
+├── public
+│   └── (自動生成のため省略)
+├── static
+└── themes
+    └── vienna
+        └── (省略)
+</code></pre>
+
+<p></br></p>
+
+<h3 id="githubレポジトリの作成">GitHubレポジトリの作成</h3>
+
+<hr />
+
+<p>まずは、GitHubにログインします。<br />
+(アカウントがなければ作成してください)<br />
+Webブラウザで以下のページを開きます。</p>
+
+<p><a href="https://github.com">https://github.com</a></p>
+
+<p>個人のレポジトリのページの &ldquo;Repositories&rdquo; タブを選択し、&rdquo;New&rdquo; をクリックして、新しいレポジトリを作成します。</p>
+
+<p><img src="./github_image_001.png" width="500px"></p>
+
+<p></br></p>
+
+<p>Repository name にブログのフォルダ名を入力し、&rdquo;Create repository&rdquo; をクリックします。</p>
+
+<p><img src="./github_image_002.png" width="500px"></p>
+
+<p></br></p>
+
+<h3 id="コンテンツのアップロード">コンテンツのアップロード</h3>
+
+<hr />
+
+<p>ここでいったんターミナルに戻ります。<br />
+<a href="../20180429_hugo1">前回</a> の記事で作成した blog フォルダを一時的にリネームしておきます。</p>
+
+<pre><code class="language-bash">$ cd ..
+$ mv blog blog_bk
+</code></pre>
+
+<p>先ほど作成したGitHubのレポジトリをcloneします。</p>
+
+<pre><code class="language-bash">$ git init
+$ git clone https://github.com/(user name)/(repository name)
+</code></pre>
+
+<p>リネームしたコンテンツをblogフォルダに戻します。<br />
+(もしかしたら、エラーが出ていたかもしれませんがメモが残っておらず・・・)</p>
+
+<pre><code class="language-bash">$ cp -r blog_bk/* blog/
+$ rm -rf blog_bk
+$ cd blog
+</code></pre>
+
+<p>publicフォルダを .gitignoreファイルに追記しておきます。</p>
+
+<pre><code class="language-bash">$ echo &quot;public&quot; &gt;&gt; .gitignore
+</code></pre>
+
+<p>gh-pagesの空ブランチを作成します。</p>
+
+<pre><code class="language-bash">$ git checkout --orphan gh-pages
+$ git reset --hard
+$ git commit --allow-empty -m &quot;Initializing gh-pages branch&quot;
+$ git push origin gh-pages
+$ git checkout master
+</code></pre>
+
+<p>hugoコマンドでのビルドとデプロイ(git push)を行います。</p>
+
+<pre><code class="language-bash">$ rm -rf public
+$ git worktree add -B gh-pages public origin/gh-pages
+$ hugo
+$ cd public
+$ git add --all
+$ git commit -m &quot;Publishing to gh-pages&quot;
+$ cd ..
+$ git push origin gh-pages
+</code></pre>
+
+<p>ここで再びブラウザに戻って、ブログ用レポジトリの設定を変更します。</p>
+
+<p>レポジトリの設定ページにアクセスします。(ユーザ名とレポジトリ名は適宜変更してください)<br />
+<a href="https://github.com/(ユーザ名)/(レポジトリ名)/settings">https://github.com/(ユーザ名)/(レポジトリ名)/settings</a></p>
+
+<p>下の方にある GitHub Pages の Source を gh-pages branch に変更します。
+<img src="./github_image_003.png" width="500px"></p>
+
+<p>これで、GitHub Pagesでのホスティングができました。
+作成されたサイトにアクセスしてみます。</p>
+
+<p>https://(ユーザ名).github.io/(レポジトリ名)<br />
+(例) <a href="https://yuzuafro.github.io/yuzuafrolog/">https://yuzuafro.github.io/yuzuafrolog/</a></p>
+
+<p>これでサイトが公開できました。<br />
+ただしpublicフォルダのコンテンツファイルはgh-pagesブランチにpushされましたが、まだソースコードをpushしていません。</p>
+
+<p>以下のコマンドを実行し、masterブランチにソースコードをpushします。</p>
+
+<pre><code class="language-bash">$ git add --all
+$ git commit -m &quot;source commit&quot;
+$ git push origin master
+</code></pre>
+
+<p>これでページ公開の流れは完了です。</p>
+
+<p>次回以降のために、gh-pagesブランチへのpushをシェルスクリプトにまとめておくと便利です。<br />
+deploy.sh としました。</p>
+
+<pre><code>#!/bin/sh
+
+echo &quot;Deleting old publication&quot;
+rm -rf public
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
+
+echo &quot;Checking out gh-pages branch into public&quot;
+git worktree add -B gh-pages public origin/gh-pages
+
+echo &quot;Removing existing files&quot;
+rm -rf public/*
+
+echo &quot;Generating site&quot;
+hugo
+
+echo &quot;Updating gh-pages branch&quot;
+cd public &amp;&amp; git add --all &amp;&amp; git commit -m &quot;Publishing to gh-pages (publish.sh)&quot;
+</code></pre>
+
+<p></br></p>
+
+<p>GitHub Pagesでのホスティングの方法については、公式のドキュメントにも手順が載っています。<br />
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+
+<p>Project siteのgh-pagesブランチにサイトを作成したい場合の手順はこちらに載っています。<br />
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch">https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch</a></p>
+
+<p></br></p>
+
+<h3 id="2回目以降のコンテンツ作成">2回目以降のコンテンツ作成</h3>
+
+<hr />
+
+<p>初回のページ作成は少し大変でしたが、2回目以降は以下の手順で進めればOKです。</p>
+
+<p>記事の作成</p>
+
+<pre><code class="language-bash">$ mkdir content/posts/(記事URL)
+$ hugo new posts/(記事URL)/index.md
+</code></pre>
+
+<p>記事を編集する(Markdownファイルを編集する)</p>
+
+<p>deploy.sh の実行と gh-pagesブランチへのpush</p>
+
+<pre><code class="language-bash">$ ./deploy.sh
+$ git push origin gh-pages
+</code></pre>
+
+<p>ソースコードファイルの masterブランチへのpush</p>
+
+<pre><code class="language-bash">$ git add --all
+$ git commit -m &quot;source commit&quot;
+$ git push origin master
+</code></pre>
+  </section>
+  <footer>
+    
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'yuzuafro';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="https://yuzuafro.github.io/yuzuafrolog/posts/20180429_hugo1/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; yuzuafro
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <script src="https://yuzuafro.github.io/yuzuafrolog/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+</body>
+</html>
+
