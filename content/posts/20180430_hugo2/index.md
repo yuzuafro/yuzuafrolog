@@ -1,10 +1,10 @@
 ---
-title: "Hugoでブログを作る2"
+title: "Hugoでブログを作る 2"
 date: 2018-04-30T09:05:51+09:00
 categories:
 - "blog"
 tags:
-- "hugo"
+- "Hugo"
 - "GitHub Pages"
 ---
 
