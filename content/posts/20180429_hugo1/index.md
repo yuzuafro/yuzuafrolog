@@ -20,10 +20,10 @@ tags:
 ---
 
 Hugoは静的サイトジェネレーターです。  
-HugoとGithub Pagesを使うと無料でブログサイトを公開することができます。  
+HugoとGitHub Pagesを使うと無料でブログサイトを公開することができます。  
 コンテンツ(ブログの記事)はMarkdown形式で書くことができます。
 
-このブログはHugo + Github Pagesを使って作成されています。
+このブログはHugo + GitHub Pagesを使って作成されています。
 
 公式サイトは↓↓↓こちらになります。  
 https://gohugo.io/
@@ -140,7 +140,7 @@ $ hugo new posts/my-first-post/index.md
 Quick Startでは posts の下に my-first-post.md を作成しているけれど、posts以下にさらに記事ごとのフォルダを作って、index.md を作成する方がおすすめです。  
 
 なぜなら、画像ファイルなどを参照する際に、相対パスが使えるのでこちらの方が都合がよいからです。  
-(今までは staticフォルダ以下に置いていたようですが、localhostでの確認時とGithub Pagesのホスティング時にファイルパスが上手く合わせられなくてツラかったので)  
+(今までは staticフォルダ以下に置いていたようですが、localhostでの確認時とGitHub Pagesのホスティング時にファイルパスが上手く合わせられなくてツラかったので)  
 
 
 この機能はHugo v0.32以降で使用できるようです。  
