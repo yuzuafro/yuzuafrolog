@@ -7,13 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&amp;copy; yuzuafro</copyright>
-    <lastBuildDate>Mon, 30 Apr 2018 09:05:51 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 11:57:13 +0900</lastBuildDate>
     
 	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugoでブログを作る2</title>
+      <title>Hugoでブログを作る 3</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/</link>
+      <pubDate>Mon, 30 Apr 2018 11:57:13 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/</guid>
+      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
+&lt;a href=&#34;../20180430_hugo2/&#34;&gt;前回&lt;/a&gt; の記事では、Hugoで作成したサイトをGitHub Pagesでホスティングするところまでできました。&lt;br /&gt;
+今回の記事では、デザインの調整や便利機能の紹介をしていこうと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugoでブログを作る 2</title>
       <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo2/</link>
       <pubDate>Mon, 30 Apr 2018 09:05:51 +0900</pubDate>
       

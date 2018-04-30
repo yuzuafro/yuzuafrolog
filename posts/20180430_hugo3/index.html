@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Hugoでブログを作る 3 &middot;  ゆずあふろのブログ" />
+  
+  <meta property="og:site_name" content="ゆずあふろのブログ" />
+  <meta property="og:url" content="https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2018-04-30T11:57:13&#43;09:00" />
+  
+  <meta property="og:article:tag" content="Hugo" />
+  
+  <meta property="og:article:tag" content="CSS" />
+  
+  <meta property="og:article:tag" content="BootStrap" />
+  
+  <meta property="og:article:tag" content="Tips" />
+  
+  
+
+  <title>
+     Hugoでブログを作る 3 &middot;  ゆずあふろのブログ
+  </title>
+
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/main.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="https://yuzuafro.github.io/yuzuafrolog/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://yuzuafro.github.io/yuzuafrolog/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    <header class="global-header"  style="background-image:url(https://yuzuafro.github.io/yuzuafrolog/images/top.jpg)">
+    <section class="header-text">
+      <h1><a href="https://yuzuafro.github.io/yuzuafrolog/">ゆずあふろのブログ</a></h1>
+      
+      <div class="tag-line">
+        技術の話や趣味の話など
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+      
+      <a href="https://yuzuafro.github.io/yuzuafrolog/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">Hugoでブログを作る 3</h1>
+    <div class="post-meta clearfix">
+    
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2018-04-30T11:57:13&#43;09:00">
+          Apr 30, 2018
+        </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-category small"><a href="https://yuzuafro.github.io/yuzuafrolog//categories/blog">blog</a></span>
+        
+      </div>
+      </br>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/hugo">Hugo</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/css">CSS</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/bootstrap">BootStrap</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/tips">Tips</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    <p>こんにちは、ゆずあふろです。<br />
+<a href="../20180430_hugo2/">前回</a> の記事では、Hugoで作成したサイトをGitHub Pagesでホスティングするところまでできました。<br />
+今回の記事では、デザインの調整や便利機能の紹介をしていこうと思います。</p>
+
+<p></p>
+
+<p>さて、GitHub Pagesにブログも公開できたし、めでたしめでたし！</p>
+
+<p>&hellip; となるはずだったのですが、</p>
+
+<p>背景画像変えたくないですか？<br />
+コメント欄欲しくないですか？<br />
+なんだか文字大きくないですか？<br />
+はてなブログの人が使ってるカード型のリンク作りたくないですか？</p>
+
+<p>と、人間なので欲が出てきてしまいます。</p>
+
+<p>まだまだ改造中ではあるのですが、ここまでに得られた知見をまとめておこうと思います。</p>
+
+<hr />
+
+<h3 id="tips">Tips</h3>
+
+<p><a href="#背景画像を変更する">背景画像を変更する</a><br />
+<a href="#改行を入れる">改行を入れる</a><br />
+<a href="#コメント欄を作成する">コメント欄を作成する</a><br />
+<a href="#記事にカテゴリーを表示する">記事にカテゴリーを表示する</a><br />
+<a href="#文字の大きさを変更する">文字の大きさを変更する</a><br />
+<a href="#はてなブログカード的な機能を追加する">はてなブログカード的な機能を追加する</a></p>
+
+<p></br></p>
+
+<h3 id="背景画像を変更する">背景画像を変更する</h3>
+
+<hr />
+
+<p>viennaテーマはブログタイトルに背景画像が設定されています。<br />
+この画像も素敵なのですが、せっかくなのでオリジナルのものを使いたいということで調べてみました。</p>
+
+<p>viennaの背景画像は以下に置かれています。</p>
+
+<pre><code class="language-bash">themes/vienna/static/images/bg.jpg
+</code></pre>
+
+<p>これを差し替えるために、static/images/bg.jpg に自分で準備した画像を置いてみましたが、hugo serverでのプレビュー時はうまく表示できるのですが、GitHub Pagesにpushした後にどうも上手く表示できず・・・。<br />
+(おそらくviennaテーマはUser/Organization siteを前提に作られていそうでパスが合わない)</p>
+
+<p>苦肉の策として、top.jpg という名前に変更して、header.html も書き換えることにしました。</p>
+
+<p>bg.jpg を表示させている箇所は以下<br />
+themes/vienna/layouts/partials/header.html 44行目</p>
+
+<pre><code class="language-html">    &lt;header class=&quot;global-header&quot; style=&quot;background-image:url({{ if isset .Params &quot;image&quot; }}{{ .Params.image }} {{ else }} /images/bg.jpg {{ end }})&quot;&gt;
+</code></pre>
+
+<p>これを以下のように変更した header.html を layoutsフォルダに作成<br />
+layouts/partials/header.html</p>
+
+<pre><code class="language-html">    &lt;header class=&quot;global-header&quot; style=&quot;background-image:url({{ .Site.BaseURL }}images/top.jpg)&quot;&gt;
+</code></pre>
+
+<p>これで top.jpg を背景画像に表示できます。<br />
+この背景画像は、3年前に乗鞍岳に登った時に撮った写真です。</p>
+
+<p>ちなみに vienna は、オーストリアのウィーンのことだそうです。<br />
+都市の名前だったのですね！</p>
+
+<p></br></p>
+
+<h3 id="改行を入れる">改行を入れる</h3>
+
+<hr />
+
+<p>記事を書いていると、微妙に改行を入れたいことがあると思います。<br />
+以下のようなやり方がありました。</p>
+
+<p><u>一般的なMarkdownの改行</u></p>
+
+<pre><code>段落を変えずに改行  (← 半角スペース2つ)
+改行しました
+</code></pre>
+
+<p>段落を変えずに改行<br />
+改行しました</p>
+
+<p></br>
+<u>段落を変えて改行</u></p>
+
+<pre><code>段落を変えて改行
+
+改行しました
+</code></pre>
+
+<p>段落を変えて改行</p>
+
+<p>改行しました</p>
+
+<p></br>
+<u>改行コードによる改行</u></p>
+
+<pre><code class="language-bash">強制的に改行を入れる
+&lt;/br&gt;
+&lt;/br&gt;
+改行しました
+</code></pre>
+
+<p>強制的に改行を入れる
+</br>
+</br>
+改行しました</p>
+
+<p></br></p>
+
+<h3 id="コメント欄を作成する">コメント欄を作成する</h3>
+
+<hr />
+
+<p>viennaテーマでは、各種外部サービスのアカウント設定に対応していて、テーマのページに記載されています。</p>
+
+<p><a href="https://themes.gohugo.io/vienna/">https://themes.gohugo.io/vienna/</a></p>
+
+<p>コメント欄の作成には Disqus というサービスのアカウントを作成します。<br />
+(作成方法は割愛します)</p>
+
+<p><a href="https://disqus.com/">https://disqus.com/</a></p>
+
+<p>アカウントを作成できたら config.toml の [params] に設定すればオッケーです。</p>
+
+<pre><code>[params]
+  disqus = &quot;yuzuafro&quot;
+</code></pre>
+
+<p></br></p>
+
+<h3 id="記事にカテゴリーを表示する">記事にカテゴリーを表示する</h3>
+
+<hr />
+
+<p>viennaテーマでは、各記事のタグは表示されるようですが、カテゴリーは表示されません。<br />
+カテゴリーも表示できるようにします。</p>
+
+<p>viennaテーマでタグの表示をさせているコード
+themes/vienna/layouts/_default/single.html 16〜20行目</p>
+
+<pre><code class="language-html">      &lt;div class=&quot;pull-right&quot;&gt;
+        {{ range .Params.tags }}
+        &lt;span class=&quot;post-tag small&quot;&gt;&lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt;&lt;/span&gt;
+        {{ end }}
+      &lt;/div&gt;
+</code></pre>
+
+<p>single.htmlをコピーし、カテゴリーの表示もするようにして、layoutsフォルダに以下のファイルを作成する<br />
+layouts/_default/single.html</p>
+
+<pre><code class="language-html">      &lt;div class=&quot;pull-right&quot;&gt;
+        {{ range .Params.categories }}
+        &lt;span class=&quot;post-category small&quot;&gt;&lt;a href=&quot;{{ $baseurl }}/categories/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt;&lt;/span&gt;
+        {{ end }}
+      &lt;/div&gt;
+      &lt;/br&gt;
+      &lt;div class=&quot;pull-right&quot;&gt;
+        {{ range .Params.tags }}
+        &lt;span class=&quot;post-tag small&quot;&gt;&lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt;&lt;/span&gt;
+        {{ end }}
+      &lt;/div&gt;
+</code></pre>
+
+<p>このままだとタグとカテゴリーが同じ色になってしまうので、カテゴリー用の色の設定をCSSファイルに記載する。</p>
+
+<p>タグの色の設定をしている箇所<br />
+themse/vienna/static/css/main.css 146行目</p>
+
+<pre><code class="language-css">.post-tag a { 
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: color,border-color,background-color 0.1s linear;
+}
+
+.post-tag a:hover {
+    background-color: rgba(0, 0, 128, 1.0);
+    color: rgba(255, 255, 255, 1.0);
+}
+</code></pre>
+
+<p>main.css をコピーし、post-category の部分を追記し、以下のファイルを作成<br />
+static/css/main.css</p>
+
+<pre><code class="language-css">.post-category a { 
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: color,border-color,background-color 0.1s linear;
+}
+
+.post-category a:hover {
+    background-color: rgba(192, 0, 64, 1.0);
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.post-tag a { 
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: color,border-color,background-color 0.1s linear;
+}
+
+.post-tag a:hover {
+    background-color: rgba(0, 0, 128, 1.0);
+    color: rgba(255, 255, 255, 1.0);
+}
+</code></pre>
+
+<p>カテゴリーは赤色、タグは紺色でマウスオーバーされます。</p>
+
+<p></br></p>
+
+<h3 id="文字の大きさを変更する">文字の大きさを変更する</h3>
+
+<hr />
+
+<p>このテーマ、文字が大きいなと(特に日本語)思っていたのです。<br />
+文字の大きさを変更するにはCSSファイルをいじればいいんだよね、と思って grep してみたのですが、font-size-base を変えても1回だけ文字の大きさが変わるのですが、すぐ元の大きさに戻ってしまう&hellip;。</p>
+
+<p>結論から言うと、BootStrapを使えばオッケーでした！</p>
+
+<p>viennaテーマはBootStrapに対応しています。<br />
+(BootStrapに対応していないテーマではこの方法は使えません)</p>
+
+<p>themes/vienna/bootstrap_custom_config.json ファイルが設定用ファイルになっていて、themes/vienna/static/css/bootstrap.min.css を作成しています。</p>
+
+<p>この bootstrap_custom_config.json を、以下のサイトの Uploadエリアにアップロードすると、下部に表示される項目を編集することができます。<br />
+<a href="https://getbootstrap.com/docs/3.3/customize/">https://getbootstrap.com/docs/3.3/customize/</a></p>
+
+<p></br></p>
+
+<p>アップロードエリアにドラッグアンドドロップ、もしくは &ldquo;manually upload&rdquo; からファイルを選択する
+<img src="./bootstrap_001.png" width="500px"></p>
+
+<p>ファイルが読み込まれたら下の方に進み、@font-size-base を編集する<br />
+(17px から 14px に変更しました)<br />
+合わせて @font-size-h1 なども微調整する
+<img src="./bootstrap_002.png" width="500px"></p>
+
+<p>最後に一番下まで進み、&rdquo;Comile and Download” を選択する
+<img src="./bootstrap_003.png" width="500px"></p>
+
+<p>bootstrap.zip がダウンロードされるので、展開する<br />
+bootstrap/cssフォルダの下に bootstrap.min.css があるので、これを static/css/ に置く</p>
+
+<p>とても便利なのですが、プレビュー機能はないのでしょうか&hellip;</p>
+
+<p></br></p>
+
+<h3 id="はてなブログカード的な機能を追加する">はてなブログカード的な機能を追加する</h3>
+
+<hr />
+
+<p>はてなブログカードって何？という話もあるかもしれませんが、はてなブログでよく見かけるこんなやつです。</p>
+
+<p>普通のリンクよりわかりやすくて素敵ですよね。</p>
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=https%3a%2f%2fgithub.com%2fyuzuafro%2fyuzuafrolog" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+
+
+<p>Hugoの初期状態だと、これを使えないのですが、Custom Shortcode を作成することで実現しています。</p>
+
+<p>以下の場所に blogcard.html を作成しています。<br />
+layouts/shortcodes/blogcard.html</p>
+
+<pre><code class="language-html">&lt;iframe class=&quot;hatenablogcard&quot; style=&quot;width:100%;height:155px;max-width:500px;&quot; src=&quot;https://hatenablog-parts.com/embed?url={{ .Get &quot;url&quot; }}&quot; width=&quot;300&quot; height=&quot;150&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+
+<p></br></p>
+
+<p>Markdownファイル内では、このように記述します。<br />
+(Shortcode が展開されないように、最初の &ldquo;{&rdquo; が全角になっています)</p>
+
+<pre><code>｛{&lt; blogcard url=&quot;https://github.com/yuzuafro/yuzuafrolog&quot; &gt;}}
+</code></pre>
+
+<p></br></p>
+
+<h3 id="これからできたらいいなと思っていること">これからできたらいいなと思っていること</h3>
+
+<hr />
+
+<p>最後に、まだできてないけれど、これからできたらいいなと思っていることを書いておきます。</p>
+
+<ul>
+<li>表組みの際の色付け
+
+<ul>
+<li>CSSをごにょごにょするのかな？BootStrapでできるのかな？</li>
+</ul></li>
+<li>サイドバーの作成
+
+<ul>
+<li>やっぱりタグとかカテゴリーとかで表示できるようにしたい</li>
+</ul></li>
+</ul>
+  </section>
+  <footer>
+    
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'yuzuafro';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo2/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; yuzuafro
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <script src="https://yuzuafro.github.io/yuzuafrolog/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+</body>
+</html>
+

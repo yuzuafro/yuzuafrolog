@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on ゆずあふろのブログ</title>
+    <link>https://yuzuafro.github.io/yuzuafrolog/tags/css/</link>
+    <description>Recent content in Css on ゆずあふろのブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>&amp;copy; yuzuafro</copyright>
+    <lastBuildDate>Mon, 30 Apr 2018 11:57:13 +0900</lastBuildDate>
+    
+	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugoでブログを作る 3</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/</link>
+      <pubDate>Mon, 30 Apr 2018 11:57:13 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/</guid>
+      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
+&lt;a href=&#34;../20180430_hugo2/&#34;&gt;前回&lt;/a&gt; の記事では、Hugoで作成したサイトをGitHub Pagesでホスティングするところまでできました。&lt;br /&gt;
+今回の記事では、デザインの調整や便利機能の紹介をしていこうと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

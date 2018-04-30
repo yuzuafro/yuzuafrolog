@@ -283,6 +283,23 @@ tags:
 
 <p></br></p>
 
+<h3 id="baseurlの編集">baseURLの編集</h3>
+
+<hr />
+
+<p>このあと、GitHub Pagesにホスティングするので、baseURLを以下のように編集しておきます。</p>
+
+<pre><code>baseURL = &quot;https://(GitHubアカウント名).github.io/(レポジトリ名)/&quot;
+(例) baseURL = &quot;https://yuzuafro.github.io/yuzuafrolog/&quot;
+</code></pre>
+
+<p>baseURLを編集すると、hugo serverコマンドで参照するパスが変わってしまうので、hugo serverコマンドを使用する時には以下のオプションを付けるようにします。</p>
+
+<pre><code class="language-bash">$ hugo server -t vienna -w -D --baseURL=&quot;localhost:1313&quot;
+</code></pre>
+
+<p></br></p>
+
 <h3 id="各フォルダ-ファイルの役割">各フォルダ・ファイルの役割</h3>
 
 <hr />
