@@ -247,6 +247,8 @@ themes/vienna/bootstrap_custom_config.json ファイルが設定用ファイル�
 この bootstrap_custom_config.json を、以下のサイトの Uploadエリアにアップロードすると、下部に表示される項目を編集することができます。  
 https://getbootstrap.com/docs/3.3/customize/
 
+{{< blogcard url="https://getbootstrap.com/docs/3.3/customize/" >}}
+
 </br>
 
 アップロードエリアにドラッグアンドドロップ、もしくは "manually upload" からファイルを選択する
@@ -257,7 +259,7 @@ https://getbootstrap.com/docs/3.3/customize/
 合わせて @font-size-h1 なども微調整する
 <img src="./bootstrap_002.png" width="500px">
 
-最後に一番下まで進み、"Comile and Download” を選択する
+最後に一番下まで進み、"Compile and Download” を選択する
 <img src="./bootstrap_003.png" width="500px">
 
 bootstrap.zip がダウンロードされるので、展開する  
@@ -290,6 +292,18 @@ Markdownファイル内では、このように記述します。
 ```
 ｛{< blogcard url="https://github.com/yuzuafro/yuzuafrolog" >}}
 ```
+
+</br>
+
+Shortcode についてのドキュメントはこちらにあります。  
+https://gohugo.io/templates/shortcode-templates/
+
+{{< blogcard url="https://gohugo.io/templates/shortcode-templates/" >}}
+
+Hugoにデフォルトで入っているShortcodeについてはこちらにあります。  
+https://gohugo.io/content-management/shortcodes/
+
+{{< blogcard url="https://gohugo.io/content-management/shortcodes/" >}}
 
 </br>
 
