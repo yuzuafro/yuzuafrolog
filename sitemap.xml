@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/posts/20180506_mashiko/</loc>
+    <lastmod>2018-05-06T21:39:45+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/</loc>
     <lastmod>2018-04-30T11:57:13+09:00</lastmod>
   </url>
@@ -94,7 +99,7 @@
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/posts/</loc>
-    <lastmod>2018-04-30T11:57:13+09:00</lastmod>
+    <lastmod>2018-05-06T21:39:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -118,7 +123,19 @@
   
   <url>
     <loc>https://yuzuafro.github.io/yuzuafrolog/</loc>
-    <lastmod>2018-04-30T11:57:13+09:00</lastmod>
+    <lastmod>2018-05-06T21:39:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2018-05-06T21:39:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuzuafro.github.io/yuzuafrolog/tags/%E7%9B%8A%E5%AD%90%E9%99%B6%E5%99%A8%E5%B8%82/</loc>
+    <lastmod>2018-05-06T21:39:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
