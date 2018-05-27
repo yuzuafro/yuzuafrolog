@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Raspberry PiでOLED(SSD1331)を動かしてみる &middot;  ゆずあふろのブログ" />
+  
+  <meta property="og:site_name" content="ゆずあふろのブログ" />
+  <meta property="og:url" content="https://yuzuafro.github.io/yuzuafrolog/posts/20180527_raspi_ssd1331/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2018-05-27T01:33:14&#43;09:00" />
+  
+  <meta property="og:article:tag" content="raspberrypi" />
+  
+  <meta property="og:article:tag" content="oled" />
+  
+  <meta property="og:article:tag" content="luma.oled" />
+  
+  <meta property="og:article:tag" content="ssd1331" />
+  
+  
+
+  <title>
+     Raspberry PiでOLED(SSD1331)を動かしてみる &middot;  ゆずあふろのブログ
+  </title>
+
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/main.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="https://yuzuafro.github.io/yuzuafrolog/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://yuzuafro.github.io/yuzuafrolog/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    <header class="global-header"  style="background-image:url(https://yuzuafro.github.io/yuzuafrolog/images/top.jpg)">
+    <section class="header-text">
+      <h1><a href="https://yuzuafro.github.io/yuzuafrolog/">ゆずあふろのブログ</a></h1>
+      
+      <div class="tag-line">
+        技術の話や趣味の話など
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+      
+      <a href="https://yuzuafro.github.io/yuzuafrolog/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">Raspberry PiでOLED(SSD1331)を動かしてみる</h1>
+    <div class="post-meta clearfix">
+    
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2018-05-27T01:33:14&#43;09:00">
+          May 27, 2018
+        </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-category small"><a href="https://yuzuafro.github.io/yuzuafrolog//categories/raspberrypi">raspberrypi</a></span>
+        
+      </div>
+      </br>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/raspberrypi">raspberrypi</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/oled">oled</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/luma.oled">luma.oled</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/ssd1331">ssd1331</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    <p>こんにちは、ゆずあふろです。<br />
+積みボードに積みパーツ。(買ったけど使われることなく眠っているボードorパーツ)<br />
+きっとあなたの家にもたくさんありますよね？！</p>
+
+<p>今日は、Raspberry Pi 3 に、積みパーツとなっていた OLED(SSD1331) をつないで動かしてみたので、その方法をお届けします。</p>
+
+<p></p>
+
+<p></br></p>
+
+<h3 id="使用したoledについて">使用したOLEDについて</h3>
+
+<hr />
+
+<p>今回使ったOLEDはこちらです。<br />
+HiLetgo の 0.95インチ SPI OLED ディスプレイ SSD1331 です。<br />
+私はAmazonで買いました。購入当時(2018年1月)は1050円でした。</p>
+
+<p><img src="./SSD1331.png" width="200px"></p>
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=http%3a%2f%2famzn.asia%2f5SG9R1f" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+
+
+<p>データシートはこちらにありました。<br />
+<a href="https://cdn-shop.adafruit.com/datasheets/SSD1331_1.2.pdf">https://cdn-shop.adafruit.com/datasheets/SSD1331_1.2.pdf</a></p>
+
+<p>当たり前ですが、買っただけでは動きません。<br />
+インターネットの力を借りて、Raspberry Piで使えるサンプルプログラムと、GPIOへの接続方法を調べました。</p>
+
+<p></br></p>
+
+<h3 id="raspberry-piで使えるサンプルプログラムの導入">Raspberry Piで使えるサンプルプログラムの導入</h3>
+
+<hr />
+
+<p>こちらの Luma.OLED というページで、サンプルプログラムが色々公開されています。<br />
+素晴らしすぎて涙が出ます。</p>
+
+<p><a href="https://luma-oled.readthedocs.io/en/latest/intro.html">https://luma-oled.readthedocs.io/en/latest/intro.html</a>
+<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=https%3a%2f%2fluma-oled.readthedocs.io%2fen%2flatest%2fintro.html" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+</p>
+
+<p>まずは、<a href="https://luma-oled.readthedocs.io/en/latest/install.html">Installation</a> のページを見ながら、Raspberry Pi上にサンプルプログラムをダウンロードします。</p>
+
+<pre><code class="language-bash">$ sudo apt-get install python-dev python-pip libfreetype6-dev libjpeg-dev build-essential
+$ sudo -H pip install --upgrade luma.oled
+</code></pre>
+
+<p>Python3 でやりたい方はこちらです。</p>
+
+<pre><code class="language-bash">$ sudo apt-get install python3-dev python3-pip libfreetype6-dev libjpeg-dev build-essential
+$ sudo -H pip3 install --upgrade luma.oled
+</code></pre>
+
+<p></br></p>
+
+<p>インストールコマンドを実行したディレクトリに luma.examples ディレクトリが以下のようにできていればよさそうです。</p>
+
+<pre><code class="language-bash">$ ls
+luma.examples
+$ ls luma.examples/
+CONTRIBUTING.rst  README.rst  examples                setup.cfg  tests
+LICENSE.rst       conf        luma.examples.egg-info  setup.py   tox.ini
+</code></pre>
+
+<p></br></p>
+
+<h3 id="gpioへの接続方法">GPIOへの接続方法</h3>
+
+<hr />
+
+<p>こちらを先にやっとくべきかもでしたが、OLEDとRaspberry PiのGPIOを接続していきます。<br />
+先ほどのページの <a href="https://luma-oled.readthedocs.io/en/latest/hardware.html#i2c-vs-spi">Hardware のSPIの部分</a> の通りに接続します。<br />
+ミニブレッドボードとオスメスのジャンパワイヤを7本使って、以下のように接続しました。</p>
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th align="center">　OLED　</th>
+<th align="center">　Pin名　</th>
+<th align="center">　　　役割　　　</th>
+<th align="center">　RPi Pin　</th>
+<th align="center">　RPi Function　</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">GND</td>
+<td align="center">Ground</td>
+<td align="center">17</td>
+<td align="center">GND</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">VCC</td>
+<td align="center">+3.3V Power</td>
+<td align="center">20</td>
+<td align="center">3V3</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">D0</td>
+<td align="center">Clock</td>
+<td align="center">23</td>
+<td align="center">GPIO 11(SCLK)</td>
+</tr>
+
+<tr>
+<td align="center">4</td>
+<td align="center">D1</td>
+<td align="center">MOSI</td>
+<td align="center">19</td>
+<td align="center">GPIO 10(MOSI)</td>
+</tr>
+
+<tr>
+<td align="center">5</td>
+<td align="center">RST</td>
+<td align="center">Reset</td>
+<td align="center">22</td>
+<td align="center">GPIO 25</td>
+</tr>
+
+<tr>
+<td align="center">6</td>
+<td align="center">DC</td>
+<td align="center">Data/Command</td>
+<td align="center">18</td>
+<td align="center">GPIO 24</td>
+</tr>
+
+<tr>
+<td align="center">7</td>
+<td align="center">CS</td>
+<td align="center">Chip Select</td>
+<td align="center">24</td>
+<td align="center">GPIO8(CE0)</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p></br></p>
+
+<p><img src="./RPi3_SSD1331_breadboard.png" width="500px"></p>
+
+<p></br></p>
+
+<h3 id="サンプルプログラムの実行">サンプルプログラムの実行</h3>
+
+<hr />
+
+<p>準備が整ったので、サンプルプログラムを実行してみます。<br />
+サンプルプログラムは examplesディレクトリにある 拡張子が .py のファイルです。</p>
+
+<pre><code class="language-bash">ls examples/*.py
+3d_box.py             font_awesome.py       savepoint.py
+animated_gif.py       game_of_life.py       scrolling_pixelart.py
+...
+demo.py               picamera_video.py     weather.py
+demo_opts.py          runner.py             welcome.py
+</code></pre>
+
+<p>実行方法の詳細は、luma.examplesのGitHubページに載っています。<br />
+<a href="https://github.com/rm-hull/luma.examples">https://github.com/rm-hull/luma.examples</a></p>
+
+<p>自分の使っているデバイス(SSD1331)に合わせて、以下のオプションを設定して、clock.py を実行します。<br />
+<span style="color: red; ">(オプションを正しく設定してあげないと動きませんので注意！！)</span></p>
+
+<pre><code class="language-bash">$ python3 examples/clock.py --interface spi --display ssd1331 --width 96 --height 64
+</code></pre>
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th align="center">　オプション　</th>
+<th align="center">　設定項目　</th>
+<th align="center">　設定した値　</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">interface</td>
+<td align="center">i2cまたはspi</td>
+<td align="center">spi</td>
+</tr>
+
+<tr>
+<td align="center">display</td>
+<td align="center">OLEDの型番</td>
+<td align="center">ssd1331</td>
+</tr>
+
+<tr>
+<td align="center">width</td>
+<td align="center">幅</td>
+<td align="center">96</td>
+</tr>
+
+<tr>
+<td align="center">height</td>
+<td align="center">高さ</td>
+<td align="center">64</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p>clock.py は、下のようなアナログ時計とデジタル時計を表示するサンプルでした。</p>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">こないだうまくできなかったディスプレイの表示無事できたー😊<br>widthとheightの設定をちゃんとできてなかった模様 <a href="https://t.co/aXr2SeVTGs">pic.twitter.com/aXr2SeVTGs</a></p>&mdash; yuzuafro (@yuzu_afro) <a href="https://twitter.com/yuzu_afro/status/1000361293965021185?ref_src=twsrc%5Etfw">May 26, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p></br></p>
+
+<p>他のサンプルプログラムも実行してみます。</p>
+
+<pre><code class="language-bash">$ python3 examples/pi_logo.py --interface spi --display ssd1331 --width 96 --height 64
+</code></pre>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ラズパイのロゴが動いた<br>（サンプルを動かしているだけ） <a href="https://t.co/Nr5eigvFZ5">pic.twitter.com/Nr5eigvFZ5</a></p>&mdash; yuzuafro (@yuzu_afro) <a href="https://twitter.com/yuzu_afro/status/1000374770205048832?ref_src=twsrc%5Etfw">May 26, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>こちらは、Raspberry Piのロゴが回転するアニメーションでした！！<br />
+動画で撮ると微妙な感じになっていますが、カラー表示もきれいにできていました。</p>
+
+<p>サンプルがたくさんあるので、オリジナルのプログラムを作る場合は、似たようなサンプルを参考にしながら作れそうです。<br />
+特に、Luma.OLED の <a href="https://luma-oled.readthedocs.io/en/latest/python-usage.html">Python usage</a> や <a href="https://luma-oled.readthedocs.io/en/latest/api-documentation.html">API Documentation</a> のページに使い方がまとめられているので、つまずいたらここを見ればよさそうです。</p>
+  </section>
+  <footer>
+    
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'yuzuafro';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="https://yuzuafro.github.io/yuzuafrolog/posts/20180506_mashiko/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; yuzuafro
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <script src="https://yuzuafro.github.io/yuzuafrolog/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+</body>
+</html>
+
