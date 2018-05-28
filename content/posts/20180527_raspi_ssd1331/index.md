@@ -29,7 +29,7 @@ HiLetgo の 0.95インチ SPI OLED ディスプレイ SSD1331 です。
 
 <img src="./SSD1331.png" width="200px">
 
-{{< blogcard url="http://amzn.asia/5SG9R1f" >}}
+{{< blogcard url="http://amzn.asia/c6xci1h" >}}
 
 データシートはこちらにありました。  
 https://cdn-shop.adafruit.com/datasheets/SSD1331_1.2.pdf
@@ -156,3 +156,13 @@ $ python3 examples/pi_logo.py --interface spi --display ssd1331 --width 96 --hei
 
 サンプルがたくさんあるので、オリジナルのプログラムを作る場合は、似たようなサンプルを参考にしながら作れそうです。  
 特に、Luma.OLED の [Python usage](https://luma-oled.readthedocs.io/en/latest/python-usage.html) や [API Documentation](https://luma-oled.readthedocs.io/en/latest/api-documentation.html) のページに使い方がまとめられているので、つまずいたらここを見ればよさそうです。
+
+</br>
+
+**【2018/5/28追記】**  
+
+オプションを全部指定してあげなくても、confディレクトリの中にssd1331向けのコンフィギュレーションファイルがあって、それを指定してあげればオッケーでした。
+
+```bash
+$ python3 examples/pi_logo.py --config conf/ssd1331.conf
+```
