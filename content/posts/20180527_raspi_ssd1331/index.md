@@ -29,7 +29,7 @@ HiLetgo の 0.95インチ SPI OLED ディスプレイ SSD1331 です。
 
 <img src="./SSD1331.png" width="200px">
 
-{{< blogcard url="http://amzn.asia/c6xci1h" >}}
+http://amzn.asia/c6xci1h  
 
 データシートはこちらにありました。  
 https://cdn-shop.adafruit.com/datasheets/SSD1331_1.2.pdf
