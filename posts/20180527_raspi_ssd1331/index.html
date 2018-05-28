@@ -136,7 +136,7 @@ HiLetgo の 0.95インチ SPI OLED ディスプレイ SSD1331 です。<br />
 
 <p><img src="./SSD1331.png" width="200px"></p>
 
-<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=http%3a%2f%2famzn.asia%2f5SG9R1f" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=http%3a%2f%2famzn.asia%2fc6xci1h" width="300" height="150" frameborder="0" scrolling="no"></iframe>
 
 
 <p>データシートはこちらにありました。<br />
@@ -357,6 +357,15 @@ demo_opts.py          runner.py             welcome.py
 
 <p>サンプルがたくさんあるので、オリジナルのプログラムを作る場合は、似たようなサンプルを参考にしながら作れそうです。<br />
 特に、Luma.OLED の <a href="https://luma-oled.readthedocs.io/en/latest/python-usage.html">Python usage</a> や <a href="https://luma-oled.readthedocs.io/en/latest/api-documentation.html">API Documentation</a> のページに使い方がまとめられているので、つまずいたらここを見ればよさそうです。</p>
+
+<p></br></p>
+
+<p><strong>【2018/5/28追記】</strong></p>
+
+<p>オプションを全部指定してあげなくても、confディレクトリの中にssd1331向けのコンフィギュレーションファイルがあって、それを指定してあげればオッケーでした。</p>
+
+<pre><code class="language-bash">$ python3 examples/pi_logo.py --config conf/ssd1331.conf
+</code></pre>
   </section>
   <footer>
     
