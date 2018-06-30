@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" 第8回 Raspberry Pi もくもく会（ラズパイ&#43;Azureハンズオン） 開催レポート &middot;  ゆずあふろのブログ" />
+  
+  <meta property="og:site_name" content="ゆずあふろのブログ" />
+  <meta property="og:url" content="https://yuzuafro.github.io/yuzuafrolog/posts/20180626_azureiot/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2018-06-30T16:15:11&#43;09:00" />
+  
+  <meta property="og:article:tag" content="raspimoku" />
+  
+  <meta property="og:article:tag" content="azure" />
+  
+  
+
+  <title>
+     第8回 Raspberry Pi もくもく会（ラズパイ&#43;Azureハンズオン） 開催レポート &middot;  ゆずあふろのブログ
+  </title>
+
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/main.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://yuzuafro.github.io/yuzuafrolog/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="https://yuzuafro.github.io/yuzuafrolog/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://yuzuafro.github.io/yuzuafrolog/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    <header class="global-header"  style="background-image:url(https://yuzuafro.github.io/yuzuafrolog/images/top.jpg)">
+    <section class="header-text">
+      <h1><a href="https://yuzuafro.github.io/yuzuafrolog/">ゆずあふろのブログ</a></h1>
+      
+      <div class="tag-line">
+        技術の話や趣味の話など
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+      
+      <a href="https://yuzuafro.github.io/yuzuafrolog/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">第8回 Raspberry Pi もくもく会（ラズパイ&#43;Azureハンズオン） 開催レポート</h1>
+    <div class="post-meta clearfix">
+    
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2018-06-30T16:15:11&#43;09:00">
+          Jun 30, 2018
+        </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-category small"><a href="https://yuzuafro.github.io/yuzuafrolog//categories/meetup">meetup</a></span>
+        
+      </div>
+      </br>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/raspimoku">raspimoku</a></span>
+        
+        <span class="post-tag small"><a href="https://yuzuafro.github.io/yuzuafrolog//tags/azure">azure</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    <p>こんにちは、ゆずあふろ(<a href="https://twitter.com/yuzu_afro">@yuzu_afro</a>)です。<br />
+記事を書くまで少し間が空いてしまいましたが、6/17(日)に「第8回 Raspberry Pi もくもく会（ラズパイ+Azureハンズオン）」を開催しました。</p>
+
+<p>この日は、いつものもくもく会ではなくて、講師に日本マイクロソフトの太田 寛さんをお招きして、全員ハンズオンに参加してもらうスタイルで開催しました。<br />
+（<a href="https://twitter.com/hashtag/raspimoku?src=hash">#raspimoku</a> では初めての試みでした！）</p>
+
+<p></p>
+
+<p><a href="https://raspberry-pi-moku.connpass.com/event/89297/">https://raspberry-pi-moku.connpass.com/event/89297/</a></p>
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=https%3a%2f%2fraspberry-pi-moku.connpass.com%2fevent%2f89297%2f" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+
+
+<p></br></p>
+
+<h3 id="ハンズオン内容">ハンズオン内容</h3>
+
+<hr />
+
+<p>今回のハンズオンは、「Azure上（クラウド側）にAzure IoT Hub リソースを作成し、クラウドに接続するデバイスとしてRaspberry Piを使用して、C言語のAzure IoT SDKのサンプルコードを動かしてみよう」という内容でした。</p>
+
+<p>当日のハンズオン内容は以下の内容でした。</p>
+
+<ul>
+<li>準備</li>
+<li>Azure IoT Hub 概要紹介</li>
+<li>Azure IoT Hub リソース作成（クラウド側）</li>
+<li>Azure IoT SDK 環境の構築（ラズパイ側）</li>
+<li>サンプルプログラムの実行</li>
+</ul>
+
+<p></br></p>
+
+<h3 id="準備">準備</h3>
+
+<hr />
+
+<p>今回は事前準備として、Azureのサブスクリプションを作成してもらってきていました。<br />
+Azureのアカウントは無料で作成できますが、作成時にクレジットカードが必要です。</p>
+
+<p>Azureサブスクリプション契約の方法は、<a href="https://aka.ms/iotkitholv4prep">こちら</a>の資料のP19〜23 に掲載されています。<br />
+<a href="https://aka.ms/iotkitholv4prep">https://aka.ms/iotkitholv4prep</a><br />
+（P19の「デバイスのセットアップ」以外を行います）</p>
+
+<p>当日は、初めに自己紹介を行いつつ、PCとラズパイを会場のWi-Fiに接続してもらいました。<br />
+ここでラズパイを会場のWi-Fiに接続できなかった方が数名おりまして、時間をロスしてしまった感があるので、いざという時のために予備をちゃんと準備しておくべきだったなというのが反省点です。</p>
+
+<p></br></p>
+
+<h3 id="azure-iot-hubの概要">Azure IoT Hubの概要</h3>
+
+<hr />
+
+<p>私が予備ラズパイの準備に手こずっている間に、太田さんが Azure IoT Hubの概要を解説されていました。</p>
+
+<p>当日の資料は<a href="https://1drv.ms/p/s!Aihe6QsTtyqct-IJXYS-qnxHq6sRLw">こちら</a> になります。<br />
+<a href="https://1drv.ms/p/s!Aihe6QsTtyqct-IJXYS-qnxHq6sRLw">https://1drv.ms/p/s!Aihe6QsTtyqct-IJXYS-qnxHq6sRLw</a></p>
+
+<p>私はバタバタしていて全部を聞けていたわけではないのですが、Azureの料金体系についてや、Azure IoT Hubがどんな用途に適しているか、デバイス側のSDKの種類などを詳しく解説していただきました。</p>
+
+<p>私が聞いていた範囲の要点をまとめます。（間違ってたらすみません。）</p>
+
+<ul>
+<li>Azureのサービスは無料期間（1ヶ月）が終了しても勝手に課金されることはない（安心！）</li>
+<li>クラウドのよいところは、スケールが簡単にできるところ</li>
+<li>Azure IoT Hubは、AWS GreengrassやOSSのKafkaのようなサービス</li>
+<li>デバイスとIoT Hubの情報のやりとりはHTTP/AMQP/MqTTが使用できる</li>
+<li>デバイス側のアプリケーションの開発には、Azure IoT SDK/Azure IoT Edge SDK を使用する（SDKはOSSで提供されている）
+
+<ul>
+<li>Azure IoT SDK には、組み込み機器向けのAzure IoT Device SDKと、サーバー向けのAzure IoT Service SDKがある
+
+<ul>
+<li>デバイスのOSは、Linux、Win32などをサポート</li>
+<li>開発言語は、C/C++、C#、Javascript、Python、Javaなど</li>
+</ul></li>
+<li>Azure IoT Edge SDK は、コンテナベースのモジュール環境
+
+<ul>
+<li>ラズパイでもDockerを入れれば使える</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p></br></p>
+
+<h3 id="azure-iot-hub-リソースの作成-ハンズオン">Azure IoT Hub リソースの作成（ハンズオン）</h3>
+
+<hr />
+
+<p>ここから実際に手を動かすところです。<br />
+忘れてしまいそうなので、スクリーンショットとともに残しておきます。</p>
+
+<p>Azureの <a href="https://portal.azure.com/">ポータルページ</a> を開きます。</p>
+
+<p></br></p>
+
+<h4 id="ダッシュボードとリソースグループの作成">ダッシュボードとリソースグループの作成</h4>
+
+<hr />
+
+<p>まず始めに、ダッシュボードとリソースグループを作成します。</p>
+
+<p>Azureの各サービスはリソースという単位で提供されています。<br />
+Webサーバー、データベース、ストレージの各種リソースを1つにまとめるのがリソースグループです。<br />
+今回はIoT Hubしか使わないのでリソースグループにしなくてもよいかもしれませんが、リソースグループを作成しておくと削除する時もまとめてできるので便利だそうです。</p>
+
+<p>ダッシュボードは、作成したリソースグループやリソースを登録して、簡単にアクセスできるようにするためのものです。</p>
+
+<p>今回は yuzuafro_raspimoku_20180617 というリソースグループを作成し、ダッシュボード Raspimoku に登録しました。</p>
+
+<p>ちなみに、ハンズオンでは、ここまでは事前準備してくることとなっておりました。<br />
+（当日も説明していただきました）</p>
+
+<p><em>リソースグループメニューのスクリーンショット</em></p>
+
+<p><img src="./azure_resourcegroup.png" width="700px"></p>
+
+<p><em>ダッシュボードのスクリーンショット</em></p>
+
+<p><img src="./azure_dashboard_001.png" width="700px"></p>
+
+<p>（このスクリーンショットは IoT Hub のリソースを作成後のものになります）</p>
+
+<p></br></p>
+
+<h4 id="iot-hub-の作成">IoT Hub の作成</h4>
+
+<hr />
+
+<p>次に、IoT Hub のリソースを作成します。<br />
+「リソースの作成」を選択し、検索窓に &ldquo;IoT&rdquo; などと入力すると候補が出てくるので、「IoT Hub」を選択します。<br />
+（ここ、1人でやったらつまずきそうな気がします、検索窓が上にもあるし、リソース名わからなかったら進めない・・・）</p>
+
+<p><img src="./iot_hub_001.png" width="600px"></p>
+
+<p>次の画面で、IoT Hub の新規作成を選択すると、以下の画面になります。<br />
+ここで、Subscription、Resource Group、Region を選択、IoT Hub Name を入力して「Next: Size and scale」を選択します。</p>
+
+<p>Regionは、ハンズオンでは 米国西部2 を使用しました。</p>
+
+<p><img src="./iot_hub_008.png" width="500px"></p>
+
+<p>Size and scale の画面の、Pricing and scale tier で「F1: Free tier」を選択し「Review + create」を選択します。
+<img src="./iot_hub_007.png" width="500px"></p>
+
+<p>IoT Hub が作成されると、ダッシュボードにピン留めしますか？と聞かれるのでピン留めします。<br />
+ピン留めすると下のようにダッシュボードからIoT Hubに簡単にアクセスできるようになります。<br />
+ピン留めする前にメッセージが消えてしまった場合は、上部のベルのアイコンからピン留め設定できました。<br />
+ダッシュボードから、IoT Hub のメニューを選択します。<br />
+<img src="./azure_dashboard_002.png" width="700px"></p>
+
+<p></br></p>
+
+<h4 id="iot-devices-の設定">IoT devices の設定</h4>
+
+<hr />
+
+<p>IoT Hub のリソースを選択すると、Overview が表示されていると思います。<br />
+この左側のメニューを下にスクロールさせて「IoT devices」を選択します。</p>
+
+<p><img src="./iot_hub_003.png" width="500px"></p>
+
+<p>「IoT devices」を選択したら、「Add」からデバイスを登録します。<br />
+右側に「Add Device」のメニューが表示されるので、Device ID を入力して「Save」を選択します。</p>
+
+<p><img src="./iot_hub_004.png" width="600px"></p>
+
+<p>作成されたデバイスを選択すると、以下のような画面になります。<br />
+Primary Key と Secondary Key が生成されています。<br />
+上2つが実際のキーの値で、下2つはデバイス側に設定する文字列（上2つのキーを使っている）となります。<br />
+このキー（を使った文字列）は後ほどラズパイに設定するのでこのページを開いておくか、右側の青いコピーボタンを使って、どこかにコピーしておきましょう。</p>
+
+<p>一般的には、誰かに教える場合は Secondary Key を使うそうですが、今日はホビー用途ということなので、どちらでもよいでしょうとのことでした。</p>
+
+<p><img src="./iot_hub_005.png" width="600px">
+</br></p>
+
+<h3 id="azure-iot-sdk環境の構築">Azure IoT SDK環境の構築</h3>
+
+<hr />
+
+<p>さてさて、ようやくラズパイ側の設定に入ります。<br />
+今回は、C言語のSDKを使います。<br />
+<a href="https://github.com/Azure/azure-iot-sdk-c">https://github.com/Azure/azure-iot-sdk-c</a></p>
+
+<p>ちなみに Python や Node.js のSDKもありますが、Raspberry Piにプリインストールされている python や node のバージョンが古いと動作できないので、SDKで必要なバージョンを実行できる環境をラズパイに準備する必要があるようです。</p>
+
+<p>C言語のSDKはバージョンは気にしなくて大丈夫そうです(^^;)</p>
+
+<p>ということで、あとは↑の GitHub の Readme を見ながら、ラズパイに環境を整えていきます。<br />
+Raspbian は、Debian系のOSということで、「Packages and Libraries」の「Linux:Device SDK on apt-get」の内容を実行していきます。<br />
+<a href="https://github.com/Azure/azure-iot-sdk-c/blob/master/doc/devbox_setup.md#linux">https://github.com/Azure/azure-iot-sdk-c/blob/master/doc/devbox_setup.md#linux</a></p>
+
+<p>Raspberry Pi のターミナルを起動して、必要なパッケージをインストールします。</p>
+
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install -y git cmake build-essential curl libcurl4-openssl-dev libssl-dev uuid-dev
+</code></pre>
+
+<p>CMake と gcc のバージョンを確認します。</p>
+
+<pre><code class="language-bash">cmake --version
+gcc --version
+</code></pre>
+
+<p>git clone して、SDKのソースコードをRaspberry Pi 上にダウンロードします。<br />
+（当日は -b オプションは使いませんでした）</p>
+
+<pre><code class="language-bash">git clone -b &lt;yyyy-mm-dd&gt; --recursive https://github.com/Azure/azure-iot-sdk-c.git
+</code></pre>
+
+<p></br></p>
+
+<h3 id="サンプルを動かしてみる">サンプルを動かしてみる</h3>
+
+<hr />
+
+<p>SDKのソースコードをダウンロードできたら、先ほどのページの続きの「Build the C SDK in Linux」を実行していきます。</p>
+
+<p>GitHub のセットアップ手順では、cmake ディレクトリを作成して cmake を行なっていますが、
+この CMake を行う前に、クラウド側で作成した Azure IoT Hub のキーを設定する箇所がありますので、編集します。</p>
+
+<p>SDKをダウンロードしたディレクトリに移動します。（以下は私の例です）</p>
+
+<pre><code class="language-bash">/home/pi/develop/azure-iot-sdk-c
+</code></pre>
+
+<p>今回は、iothub_client/samples/iothub_convenience_sample のサンプルを実行してみます。</p>
+
+<p>以下のファイルを変更します。<br />
+iothub_client/samples/iothub_convenience_sample/iothub_convenience_sample.c<br />
+connectionString を、IoT devices の設定ページで確認した Connection String に書き換えます。<br />
+（HostName= の部分からコピーペーストしてOKです）</p>
+
+<pre><code class="language-c">/* Paste in your device connection string  */
+static const char* connectionString = &quot;[device connection string]&quot;;
+↓↓↓ 書き換える
+static const char* connectionString = &quot;HostName=xxxxxxxx.azure-devices.net;xxxxxxxx&quot;;
+#define MESSAGE_COUNT        5
+static bool g_continueRunning = true;
+</code></pre>
+
+<p>キーの設定ができたら、ビルドします。</p>
+
+<pre><code class="language-bash">mkdir cmake
+cd cmake
+cmake ..
+cmake --build .
+</code></pre>
+
+<p>ビルドが終了すると、以下の場所に iothub_convenience_sample の実行ファイルが作成されますので、実行してみましょう。<br />
+/home/pi/develop/azure-iot-sdk-c/cmake/iothub_client/samples/iothub_convenience_sample/iothub_convenience_sample</p>
+
+<pre><code>cd iothub_client/samples/iothub_convenience_sample
+./iothub_convenience_sample
+</code></pre>
+
+<p>IoT Hub にメッセージを5回送ってコールバックが帰ってくるかを確認しています。<br />
+その後 IoT Hub からのメッセージ受信待ちになります。<br />
+Enterキーが押下されるとプログラムが終了します。</p>
+
+<pre><code>This sample will send 5 messages and wait for any C2D messages.
+Press the enter key to end the sample
+
+Creating IoTHub handle
+Sending message 1 to IoTHub
+Sending message 2 to IoTHub
+Sending message 3 to IoTHub
+Sending message 4 to IoTHub
+Sending message 5 to IoTHub
+The device client is connected to iothub
+Confirmation callback received for message 1 with result IOTHUB_CLIENT_CONFIRMATION_OK
+Confirmation callback received for message 2 with result IOTHUB_CLIENT_CONFIRMATION_OK
+Confirmation callback received for message 3 with result IOTHUB_CLIENT_CONFIRMATION_OK
+Confirmation callback received for message 4 with result IOTHUB_CLIENT_CONFIRMATION_OK
+Confirmation callback received for message 5 with result IOTHUB_CLIENT_CONFIRMATION_OK
+</code></pre>
+
+<p>次にプログラムを起動させた状態のまま、IoT Hub からメッセージを送ってみます。<br />
+クラウド側に戻って、先ほど開いていた IoT device の Device Details のページを開きます。<br />
+上部にある「Message to Device」を選択します。</p>
+
+<p><img src="./iot_hub_005_2.png" width="600px"></p>
+
+<p>Message Body に &ldquo;test&rdquo; を入力して、上部の「Send Message」を押下します。</p>
+
+<p><img src="./iot_hub_006.png" width="600px"></p>
+
+<p>Raspberry Pi でプログラムを実行させているコンソールに、test のメッセージが受信できていれば成功です。</p>
+
+<pre><code>Received Binary message
+Message ID: &lt;unavailable&gt;
+ Correlation ID: &lt;unavailable&gt;
+ Data: &lt;&lt;&lt;test&gt;&gt;&gt; &amp; Size=4
+
+</code></pre>
+
+<p>プログラムの中身を詳しく知りたい方は、サンプルコードの中身を見ていくとよさそうです。<br />
+<a href="https://github.com/Azure/azure-iot-sdk-c/tree/master/iothub_client/samples">サンプルコード</a> は他にもたくさん準備されていますが、基本的に connectionString を書き換えれば動かせるようです。<br />
+また、<code>iothub_ll_</code> から始まっているサンプルは、Low Level なものとなっているそうです。</p>
+
+<p></br></p>
+
+<h3 id="感想など">感想など</h3>
+
+<hr />
+
+<p>ある程度わかってはいたのですが、Azure側の知識と、デバイス（Raspberry Pi）側の知識の両方が必要になってくるので、ちょっとやってみようかな〜と思っても1人で始めるのはなかなかハードルが高いなと感じました。</p>
+
+<p>Azure側のサービス（リソース）の名前を理解していないと使いこなせなそうなのもハードルを少し上げている気がします。</p>
+
+<p>ただ、今回のようにハンズオンを経験できると、最初につまづきそうなところを取り除いてもらえるので、とてもよかったです。</p>
+
+<p>今回講師をしてくださった太田さんは、ALGYAN（あるじゃん）さんという団体で、定期的に Azure IoT のイベントを開催されているようなので、これから始めてみたい方はこちらをチェックしておくのがよさそうです！</p>
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;max-width:500px;" src="https://hatenablog-parts.com/embed?url=https%3a%2f%2falgyan.connpass.com%2f" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+
+
+<p></br></p>
+
+<p>さてさて、長文になりましたが読んでいただきありがとうございました。<br />
+次回の Raspberry Pi もくもく会 は、7/21(土)の開催です。<br />
+ぜひご参加ください！！</p>
+
+<p>Connpassも公開しております。
+お申し込みはこちらからどうぞ！！<br />
+（キャンセル待ちになってしまいますが）<br />
+<a href="https://raspberry-pi-moku.connpass.com/event/92749/">https://raspberry-pi-moku.connpass.com/event/92749/</a></p>
+  </section>
+  <footer>
+    
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'yuzuafro';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="https://yuzuafro.github.io/yuzuafrolog/posts/20180527_raspi_ssd1331/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; yuzuafro
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/yuzu_afro" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://instagram.com/yuzukonango" target="_blank">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/yuzuafro" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <script src="https://yuzuafro.github.io/yuzuafrolog/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+</body>
+</html>
+

@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&amp;copy; yuzuafro</copyright>
-    <lastBuildDate>Sun, 27 May 2018 01:33:14 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 30 Jun 2018 16:15:11 +0900</lastBuildDate>
     
 	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>第8回 Raspberry Pi もくもく会（ラズパイ&#43;Azureハンズオン） 開催レポート</title>
+      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180626_azureiot/</link>
+      <pubDate>Sat, 30 Jun 2018 16:15:11 +0900</pubDate>
+      
+      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180626_azureiot/</guid>
+      <description>&lt;p&gt;こんにちは、ゆずあふろ(&lt;a href=&#34;https://twitter.com/yuzu_afro&#34;&gt;@yuzu_afro&lt;/a&gt;)です。&lt;br /&gt;
+記事を書くまで少し間が空いてしまいましたが、6/17(日)に「第8回 Raspberry Pi もくもく会（ラズパイ+Azureハンズオン）」を開催しました。&lt;/p&gt;
+
+&lt;p&gt;この日は、いつものもくもく会ではなくて、講師に日本マイクロソフトの太田 寛さんをお招きして、全員ハンズオンに参加してもらうスタイルで開催しました。&lt;br /&gt;
+（&lt;a href=&#34;https://twitter.com/hashtag/raspimoku?src=hash&#34;&gt;#raspimoku&lt;/a&gt; では初めての試みでした！）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Raspberry PiでOLED(SSD1331)を動かしてみる</title>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Meetup on ゆずあふろのブログ</title>
-    <link>https://yuzuafro.github.io/yuzuafrolog/categories/meetup/</link>
-    <description>Recent content in Meetup on ゆずあふろのブログ</description>
+    <title>Azure on ゆずあふろのブログ</title>
+    <link>https://yuzuafro.github.io/yuzuafrolog/tags/azure/</link>
+    <description>Recent content in Azure on ゆずあふろのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&amp;copy; yuzuafro</copyright>
     <lastBuildDate>Sat, 30 Jun 2018 16:15:11 +0900</lastBuildDate>
     
-	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yuzuafro.github.io/yuzuafrolog/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,30 +23,6 @@
 
 &lt;p&gt;この日は、いつものもくもく会ではなくて、講師に日本マイクロソフトの太田 寛さんをお招きして、全員ハンズオンに参加してもらうスタイルで開催しました。&lt;br /&gt;
 （&lt;a href=&#34;https://twitter.com/hashtag/raspimoku?src=hash&#34;&gt;#raspimoku&lt;/a&gt; では初めての試みでした！）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>第6回 Raspberry Pi もくもく会 開催レポート</title>
-      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180422_raspimoku/</link>
-      <pubDate>Sun, 22 Apr 2018 23:32:05 +0900</pubDate>
-      
-      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180422_raspimoku/</guid>
-      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
-「第6回 Raspberry Pi もくもく会」を開催しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>女子限定！アマチュア無線のことを知る勉強会 参加レポート</title>
-      <link>https://yuzuafro.github.io/yuzuafrolog/posts/20180419_ham/</link>
-      <pubDate>Thu, 19 Apr 2018 23:40:23 +0900</pubDate>
-      
-      <guid>https://yuzuafro.github.io/yuzuafrolog/posts/20180419_ham/</guid>
-      <description>&lt;p&gt;こんにちは、ゆずあふろです。&lt;br /&gt;
-「女子限定！アマチュア無線のことを知る勉強会」に参加してきました。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
